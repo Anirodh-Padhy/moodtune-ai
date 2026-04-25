@@ -1,0 +1,208 @@
+# 🎧 MoodTune AI
+
+### Real-Time Emotion-Based Music Recommendation System
+
+---
+
+## 🚀 Overview
+
+MoodTune AI is a real-time AI-powered web application that detects human facial emotions using deep learning and recommends music accordingly using Spotify integration.
+
+The system captures live video input, analyzes facial expressions, predicts emotions, and dynamically suggests songs based on the detected mood with direct playback links.
+
+---
+
+## 🧠 Features
+
+* 🎥 Real-time face detection using OpenCV
+* 🤖 Emotion classification using Deep Learning (CNN / Transfer Learning)
+* 📊 Confidence score visualization
+* 🎧 Spotify-based music recommendation system
+* 🖼️ Album cover display with song details
+* ▶️ Direct Spotify playback links
+* 🔄 Refresh songs feature
+* 🎨 Interactive Streamlit UI
+* ⚡ Optimized for real-time performance
+
+---
+
+## 🧰 Tech Stack
+
+* **Frontend/UI:** Streamlit
+* **Backend:** Python
+* **Deep Learning:** TensorFlow / Keras
+* **Computer Vision:** OpenCV
+* **Music API:** Spotify API (Spotipy)
+* **Data Handling:** NumPy, Pandas
+* **Model:** CNN / Xception (Transfer Learning)
+
+---
+
+## 📁 Project Structure
+
+```
+EMOTION-MUSIC-AI/
+│
+├── app/
+│   └── streamlit_app.py
+│
+├── data/
+│   ├── train/
+│   ├── test/
+│   └── music_dataset.csv
+│
+├── models/
+│   ├── emotion_model.h5
+│   └── train_model.py
+│
+├── src/
+│   ├── detection/
+│   │   ├── face_detector.py
+│   │   └── emotion_predictor.py
+│   │
+│   └── recommendation/
+│       └── music_recommender.py
+│
+├── .env   # (Not uploaded – stores API keys securely)
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repository
+
+```
+git clone https://github.com/your-username/emotion-music-ai.git
+cd emotion-music-ai
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+### 3️⃣ Setup Spotify API Keys
+
+Create a `.env` file in the root directory:
+
+```
+SPOTIFY_CLIENT_ID=your_client_id
+SPOTIFY_CLIENT_SECRET=your_client_secret
+```
+
+⚠️ Do NOT upload `.env` to GitHub.
+
+---
+
+### 4️⃣ Run Application
+
+```
+streamlit run app/streamlit_app.py
+```
+
+---
+
+## 📊 Model Details
+
+* Dataset: FER-2013
+* Input Size: 128x128 RGB images
+
+### Classes:
+
+* Angry
+* Disgust
+* Fear
+* Happy
+* Neutral
+* Sad
+* Surprise
+
+### Techniques Used:
+
+* Data Augmentation
+* Transfer Learning
+* Fine-tuning
+* Class balancing
+
+---
+
+## 📊 Model Performance
+
+The model was trained on the FER-2013 dataset and evaluated on a validation/test split.
+
+### 🎯 Final Metrics
+
+* **Training Accuracy:** 48.50%
+* **Validation Accuracy:** 54.46%
+* **Test Accuracy:** 54.46%
+
+---
+
+### 📌 Interpretation
+
+* The model shows **good generalization**, performing better on unseen data than training data.
+* FER-2013 is a **challenging dataset** due to low resolution and noisy labels.
+* The system is optimized for **real-time performance and user experience** rather than just accuracy.
+
+---
+
+### ⚠️ Challenges
+
+* Low image quality (48×48 grayscale)
+* Class imbalance
+* Subtle facial expression variations
+
+---
+
+### 🚀 Improvements Explored
+
+* Transfer Learning (MobileNet / Xception)
+* Data Augmentation
+* Class Weight Balancing
+* Learning Rate Scheduling
+
+---
+
+## 🔮 Future Improvements
+
+* 🎧 In-app Spotify audio preview
+* 📱 Mobile app version
+* 🎨 Advanced UI/UX design (Spotify-like interface)
+* 🧠 Improved model accuracy (EfficientNet / ViT)
+* 📊 Emotion tracking dashboard
+
+---
+
+## 💡 Key Learnings
+
+* Real-time AI system optimization
+* Integrating external APIs (Spotify)
+* Secure handling of API credentials
+* UI performance tuning in Streamlit
+* Building robust fallback systems
+
+---
+
+## 👨‍💻 Author
+
+**Anirodh Padhy**
+
+* 💼 Aspiring AI/ML Engineer
+* 🔗 LinkedIn: (www.linkedin.com/in/anirodh-padhy-ab3455315)
+* 💻 GitHub: (https://github.com/Anirodh-Padhy/moodtune-ai)
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub and feel free to fork!
+
+---
